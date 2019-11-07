@@ -1,0 +1,17 @@
+<h3>Edit shop form</h3><br>
+
+<form action="/one_shop?id=<%=@shop["id"]%>" method="post">
+
+  <input type="hidden" name="_method" value="patch">
+  <label for="">shop name</label>
+  <input type="text" name='name' value="<%= @shop["shop_name"] %>"><br><br>
+  <label for="">location</label>
+  <input type="text" name="location" value="<%= @shop["location"] %>"><br><br>
+  <label for="">website</label>
+  <input type="text" name="website" value="<%= @shop["website"] %>"><br><br>
+  <label for="">bio</label>
+  <input type="text" name="bio" value="<%= @shop["bio"] %>"><br><br>
+
+  <button>confirm edit</button>
+  
+</form>

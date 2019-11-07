@@ -32,6 +32,15 @@ nav{
 
 }
 
+.big_box{
+  height: 100px;
+  width: 100px;
+}
+
+form{
+display: inline-block;
+}
+
 a{
   font-family: 'Just Me Again Down Here', cursive;
   font-weight: bold;

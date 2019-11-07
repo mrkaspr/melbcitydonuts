@@ -1,8 +1,8 @@
 <h3>Home page</h3><br>
 
-  <% if session[:id] != nil %>
+  <% if logged_in? %>
 
-      <% user = find_user_by_id(session[:id]) %>
+      <% user = current_user %>
 
       <p>Welcome <%= user["email"] %> admin! <a href="/log_out">log out</a></p><br>
 

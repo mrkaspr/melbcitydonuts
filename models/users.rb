@@ -1,12 +1,4 @@
-def run_sql(sql)
 
-  conn = PG.connect(ENV['DATABASE_URL'] || {dbname: "melbcitydonuts"})
-  records = conn.exec(sql)
-  
-  conn.close
-  
-  return records
-end
 
 #session use this to get information from the database
 def find_user_by_id(id)
@@ -28,3 +20,20 @@ def find_user_by_email(email)
   return run_sql("SELECT * FROM users WHERE email = '#{email}';").first
 end
 
+def logged_in?
+
+  if current_user
+    return true
+  else
+    return false
+  end
+
+end
+
+def current_user
+  if session[:id] != nil
+    find_user_by_id(session[:id])
+  else
+   return nil
+  end
+end

@@ -1,1 +1,18 @@
-<h3>edit donut form</h3>
+<h3>Edit donut form</h3><br>
+
+  
+<form action="/one_donut?id=<%=@donut["id"]%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  
+  <label for="">name</label>
+  <input type="text" name='donut_name' value="<%= @donut["donut_name"] %>"><br><br>
+  
+  <label for="">shop name</label>
+  <input type="text" name="shop_name" value="<%= @donut["shop_name"] %>"><br><br>
+  
+  <label for="">review</label>
+  <input type="text" name="review" value="<%= @donut["review"] %>"><br><br>
+
+  <button>confirm edit</button>
+  
+</form>

@@ -1,13 +1,32 @@
 <h3>Donuts for Real!</h3><br>
-
+<%if logged_in? %>
+<p>
+  <a href="/new_donut">Click here to add new donut</a>
+</p><br>
+<%end%>
 
 <% @donuts.each do |donut| %>
 
 <p>
   <%=donut["donut_name"] %><br>
   <%=donut["shop_name"]%><br>
-  <%=donut["review"]%><br><br>
-</p>
+  <%=donut["review"]%><br>
+  
+  <%if logged_in? %>
+  <div>
+    <form action="/one_donut" method="get">
+      <input type="hidden" name="id" value="<%=donut["id"]%>">
+      <button>edit</button>
+    </form>
+    <form action="/one_donut?id=<%=donut["id"]%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button>delete</button>
+    </form>
+  </div>
+  <%end%>
+  
+</p><br>
+
 
 
 <% end %>
