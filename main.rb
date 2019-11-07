@@ -1,13 +1,18 @@
 require 'sinatra'
-require 'sinatra/reloader' # only reloads this file
 require 'pg'
 require'bcrypt'
-require 'pry'
+
 
 require_relative 'models/users.rb'
 require_relative 'models/donuts.rb'
 require_relative 'models/donut_shops.rb'
 
+if developement?
+  also_reload 'models/*'
+  also_reload 'controller/*'
+  require 'sinatra/reloader' 
+  require 'pry'
+end 
 
 def run_sql(sql)
   conn = PG.connect(ENV['DATABASE_URL'] || {dbname: "melbcitydonuts"})
@@ -16,8 +21,6 @@ def run_sql(sql)
   return records
 end
 
-also_reload 'models/*'
-also_reload 'controller/*'
 
 enable :sessions
 
