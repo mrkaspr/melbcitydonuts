@@ -2,13 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>Melbourne City Donuts</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+
+
 <body>
 
-  <%= yield %>
+  <header>
+
+    <h1>Melbourne City Donuts</h1>
+
+      <nav>
+        <a href="/">Home</a>
+        <a href="/wheres_my_donuts">Where's My Donuts?</a>
+        <a href="/donuts_for_real">Donuts For Real!</a>
+        <a href="/about_me">About Me</a>
+        <a href="/log_in">Login</a>
+      </nav>
+
+  </header>
+
+  <div class="main_div">
+    
+
+    <%= yield %>
+
+  </div>
+
+<footer>
+    copyright @mrkaspr 2019
+</footer>
 
 </body>
+
+
+
+
+
+
+
 </html>

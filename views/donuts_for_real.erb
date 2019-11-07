@@ -1,0 +1,13 @@
+<h3>Donuts for Real!</h3><br>
+
+
+<% @donuts.each do |donut| %>
+
+<p>
+  <%=donut["donut_name"] %><br>
+  <%=donut["shop_name"]%><br>
+  <%=donut["review"]%><br><br>
+</p>
+
+
+<% end %>

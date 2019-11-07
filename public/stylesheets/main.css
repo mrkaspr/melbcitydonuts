@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+
+}
+body{
+margin-left: 50px;
+margin-right: 50px;
+}
+header{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom:20px;
+}
+
+nav{
+ display: flex;
+ margin-top: 20px;
+ 
+ align-self: auto;
+ 
+}
+
+.sign_up_form,
+.login_form{
+  margin-top: 20px;
+ 
+}
+
+.main-div{
+ margin-left: 30px;
+
+}
+
+a{
+  font-family: 'Just Me Again Down Here', cursive;
+  font-weight: bold;
+  color:Black;
+  font-stretch: expanded;
+  font-size: 28px;
+  
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+footer{
+  text-align: center;
+  padding: 70px;
+ 
+    
+}
+
+h1{
+  font-family: 'Bungee Shade', cursive;
+}
+
+h3{
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 28px;
+}
+
+h4{
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 24px;
+}

@@ -1,0 +1,13 @@
+<h3>Where's My Donuts?</h3><br>
+
+<% @shops.each do |shop| %>
+
+<p>
+  <%=shop["shop_name"] %><br>
+  <%=shop["website"]%><br>
+  <%=shop["location"]%><br>
+  <%=shop["bio"]%><br><br>
+</p>
+
+
+<% end %>

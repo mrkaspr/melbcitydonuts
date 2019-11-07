@@ -1,1 +1,42 @@
-<h1>hello world</h1>
+<h3>Home page</h3><br>
+
+  <% if session[:id] != nil %>
+
+      <% user = find_user_by_id(session[:id]) %>
+
+      <p>Welcome <%= user["email"] %> admin! <a href="/log_out">log out</a></p><br>
+
+  <% end %>
+
+<div class="homepage_container">
+  <div>
+    <h4>Where's My Donuts?</h4><br>
+
+      <% @two_donuts.each do |donut| %>
+
+        <p>
+          <%=donut["donut_name"] %><br>
+          <%=donut["shop_name"]%><br>
+          <%=donut["review"]%><br><br>
+        </p>
+
+      <% end %>
+
+  </div>
+
+  <div>
+    <h4>Donuts for real!</h4><br>
+
+      <%@two_shops.each do |shop|%>
+
+        <p>
+          <%=shop["shop_name"] %><br>
+          <%=shop["website"]%><br>
+          <%=shop["location"]%><br>
+          <%=shop["bio"]%><br><br>
+        </p>
+      
+      <%end%>
+
+  </div>
+</div>
