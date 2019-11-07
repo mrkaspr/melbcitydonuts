@@ -7,7 +7,7 @@ require_relative 'models/users.rb'
 require_relative 'models/donuts.rb'
 require_relative 'models/donut_shops.rb'
 
-if developement?
+if development?
   also_reload 'models/*'
   also_reload 'controller/*'
   require 'sinatra/reloader' 
