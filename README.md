@@ -42,7 +42,7 @@ Future development:
 - Intergation with social media platform
 - check whether the design is good for mobile device view
 - log out link available at any page (can session work in layout erb)
-
+- hid login link
 
 
 
